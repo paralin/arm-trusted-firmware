@@ -5,7 +5,7 @@
 #
 
 # Cross Compile
-M0_CROSS_COMPILE ?= arm-none-eabi-
+CROSS_COMPILE ?= arm-none-eabi-
 
 # Build architecture
 ARCH		:= cortex-m0
