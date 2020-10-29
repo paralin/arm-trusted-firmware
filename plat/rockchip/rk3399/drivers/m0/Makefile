@@ -5,7 +5,7 @@
 #
 
 # Cross Compile
-M0_CROSS_COMPILE ?= arm-none-eabi-
+CROSS_COMPILE ?= arm-none-eabi-
 
 # Build architecture
 ARCH		:= cortex-m0
@@ -33,7 +33,7 @@ C_SOURCES		:= src/dram.c	\
 C_SOURCES_PMU		:= src/suspend.c
 
 # Flags definition
-COMMON_FLAGS		:= -g -mcpu=$(ARCH) -mthumb -Wall -O3 -nostdlib -mfloat-abi=soft
+COMMON_FLAGS		:= -g -mcpu=$(ARCH) -Wall -O3 -nostdlib
 CFLAGS			:= -ffunction-sections -fdata-sections -fomit-frame-pointer -fno-common
 ASFLAGS			:= -Wa,--gdwarf-2
 LDFLAGS			:= -Wl,--gc-sections -Wl,--build-id=none
